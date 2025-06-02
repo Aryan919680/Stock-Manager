@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+        input, button, select { padding: 8px; margin: 5px; }
+        .item { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .low-stock { background-color: #f8d7da; }
+        .sufficient-stock { background-color: #d4edda; }
+    </style>
+</head>
+<body>
+    <h1>Stock Management</h1>
+    <form id="itemForm">
+        <input type="text" id="itemName" placeholder="Item name" required>
+        <input type="number" id="itemQty" placeholder="Quantity" required>
+        <input type="number" id="itemThreshold" placeholder="Threshold" required>
+        <button type="submit">Add Item</button>
+    </form>
+    <input type="text" id="filterInput" placeholder="Filter items..." oninput="filterItems()">
+    <div id="stockList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
